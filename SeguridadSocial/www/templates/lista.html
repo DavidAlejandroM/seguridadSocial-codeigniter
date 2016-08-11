@@ -1,0 +1,14 @@
+<ion-view view-title="Información de Usuario">
+  <ion-content>
+    <div ng-model="busqueda">
+      <input type="search" ng-model="busqueda" placeholder="Buscar" class="input-busqueda">
+        <div class="list">
+          <a class="item item-avatar" ng-repeat="u in usuarios | filter: busqueda" ng-href="/#/info/{{u.strIdEmpresa}}">
+            <img src="img/person.png">
+            <h2>{{u.strNombres}} {{u.strApellido1}}</h2>
+            <p>{{u.strIdEmpresa}}</p>
+          </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
