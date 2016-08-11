@@ -4,8 +4,7 @@ angular.module('starter.controllers', [])
 
   .controller('UsuariosCtrl', function($scope, $http){
 
-  $scope.title = 'holaaaaaaaaaaa';
-  $http.get('http://127.0.0.2/index.php/usuarios')
+  $http.get('http://127.0.0.2/index.php/usuarios/obtenerusuarios')
     .success(function(result){
       $scope.usuarios = result;
       usuarios = $scope.usuarios;
@@ -19,10 +18,18 @@ angular.module('starter.controllers', [])
  * con la variable $state obtenemos el id pasado por url
  */
 
-.controller('infoCtrl', function($scope, $state){
+.controller('infoCtrl', function($scope, $state, $http){
   $scope.idEmpresa = $state.params.strIdEmpresa;
-  $scope.usuario = obtenerUsurio($scope.idEmpresa);
-  console.log($scope.usuario);
+  $http.get('http://127.0.0.2/index.php/usuarios/obtenerusuario/'.concat($scope.idEmpresa))
+    .success(function(result){
+      $scope.usuario = result;
+      usuario = $scope.usuario;
+      console.log($scope.usuario);
+    })
+    .error(function(result){
+      console.log('algo anda mal' + result);
+    })
+
 })
 
 function obtenerUsurio(idEmpresa){

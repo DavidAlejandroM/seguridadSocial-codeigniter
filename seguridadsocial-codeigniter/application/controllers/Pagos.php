@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Usuarios extends CI_Controller {
+class Pagos extends CI_Controller {
 
 	function __construct() {
 
@@ -14,19 +14,19 @@ class Usuarios extends CI_Controller {
 		}
 		parent::__construct();
 	}
-	public function obtenerUsuarios()
+	public function obtenerPagos()
 	{
-		$this->load->model('usuarios_model');
-		$usuarios = $this->usuarios_model->obtenerTodo();
+		$this->load->model('pagos_model');
+		$usuarios = $this->pagos_model->obtenerTodo();
 
         $json = json_encode($usuarios);
 		print_r($json);
 	}
 
-	public function obtenerUsuario($idEmpresa)
+	public function obtenerPagosUsuario($idEmpresa,$cantidad)
 	{
-		$this->load->model('usuarios_model');
-		$usuarios = $this->usuarios_model->obtenerUsuario($idEmpresa);
+		$this->load->model('pagos_model');
+		$usuarios = $this->pagos_model->obtenerPagos($idEmpresa,$cantidad);
 
 		$json = json_encode($usuarios);
 		print_r($json);
