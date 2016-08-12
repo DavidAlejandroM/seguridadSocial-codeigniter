@@ -1,1 +1,24 @@
+label.itemInfo{
+  border-style: dashed !important;
+}
 
+p.item-table{
+  font-size: 3vmin !important;
+  text-align: center;
+  font-weight: 700;
+  height: 2vmin !important;
+}
+
+div.row-table{
+  background-color: #387ef5;
+  color: white;
+}
+
+.col-15 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 15%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 15%;
+  -ms-flex: 0 0 15%;
+  flex: 0 0 15%;
+  max-width: 15%; }

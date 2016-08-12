@@ -1,0 +1,44 @@
+<ion-view view-title="Historial de Pago">
+  <ion-nav-bar class="bar-positive">
+    <ion-nav-back-button></ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content>
+    <br>
+    <div>
+      <div class="row row-table">
+        <div class="col col-15">
+          <p class="item-table">Recibo</p>
+        </div>
+        <div class="col col-20">
+          <p class="item-table">Fecha</p>
+        </div>
+        <div class="col col-30">
+          <p class="item-table">Id Empresa</p>
+        </div>
+        <div class="col col-20">
+          <p class="item-table">Salario B</p>
+        </div>
+        <div class="col col-20">
+          <p class="item-table">Vlr Pagado</p>
+        </div>
+      </div>
+      <div class="row" ng-repeat="p in pagos">
+        <div class="col col-15">
+          <p class="item-table">{{p.intIdRecibo}}</p>
+        </div>
+        <div class="col col-20">
+          <p class="item-table">{{p.datRecibo}}</p>
+        </div>
+        <div class="col col-30">
+          <p class="item-table">{{p.strIdEmpresa}}</p>
+        </div>
+        <div class="col col-20">
+          <p class="item-table">{{p.intSalarioBase | currency: $ :0}}</p>
+        </div>
+        <div class="col col-20">
+          <p class="item-table">{{p.intValorxPagar | currency: $ :0}}</p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

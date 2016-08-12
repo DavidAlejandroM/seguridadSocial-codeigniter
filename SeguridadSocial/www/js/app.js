@@ -30,6 +30,14 @@ angular.module('starter', ['ionic','starter.controllers'])
       templateUrl: 'templates/infousuario.html',
       controller: 'UsuariosCtrl'
     });
+  $stateProvider
+
+    .state('pagos', {
+      url: '/pagos/:strIdEmpresa',
+
+      templateUrl: 'templates/pagos.html',
+      controller: 'pagosCtrl'
+    });
   $urlRouterProvider
     .otherwise('/lista')
 })

@@ -1,7 +1,11 @@
-<ion-view view-title="Información de Usuario">
+<ion-view view-title="Usuarios Seguridad Social">
+  <ion-nav-bar class="bar-positive">
+    <ion-nav-back-button></ion-nav-back-button>
+  </ion-nav-bar>
   <ion-content>
+    <input type="search" ng-model="busqueda" placeholder="Buscar" class="input-busqueda">
     <div ng-model="busqueda">
-      <input type="search" ng-model="busqueda" placeholder="Buscar" class="input-busqueda">
+
         <div class="list">
           <a class="item item-avatar" ng-repeat="u in usuarios | filter: busqueda" ng-href="/#/info/{{u.strIdEmpresa}}">
             <img src="img/person.png">

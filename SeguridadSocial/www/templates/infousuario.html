@@ -1,30 +1,102 @@
 <div ng-controller="infoCtrl">
   <ion-view title="Información de Usuario">
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button></ion-nav-back-button>
+      <button class="button button-clear button-dark">Edit</button>
+    </ion-nav-bar>
     <ion-content>
-
+    <div>
       <div class="row-bottom">
         <label class="item item-avatar">
           <img src="../img/person.png">
           <span class="input-label">Usuario:</span>
-          <h2>{{usuario.strNombres}} {{usuario.strApellido1}}</h2>
+          <h2>{{usuario.strNombres}} {{usuario.strApellido1}} {{usuario.strApellido2}}</h2>
         </label>
       </div>
-        <div class="row">
-          <div class="col-50">
-            <label class="item item-input item-stacked-label">
-              <span class="input-label">Id Empresa:</span>
-              <h3>{{usuario.strIdEmpresa}}</h3>
-            </label>
-          </div>
-          <div class="col-50">
-            <label class="item item-input item-stacked-label">
-              <span class="input-label">Id Usuario</span>
-              <h3>{{usuario.strIdUsuario}}</h3>
-            </label>
-          </div>
+      <div class="row">
+        <div class="col col-50">
+          <label class="item item-input item-stacked-label itemInfo">
+            <span class="input-label">Id Empresa:</span>
+            <h3>{{usuario.strIdEmpresa}}</h3>
+          </label>
         </div>
+        <div class="col col-50">
+          <label class="item item-input item-stacked-label itemInfo">
+            <span class="input-label">Id Usuario:</span>
+            <h3>{{usuario.strIdUsuario}}</h3>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <label class="item item-input item-stacked-label itemInfo">
+            <span class="input-label">Salario Base</span>
+            <h3>{{usuario.intSalarioBase | currency: $ :0}}</h3>
+          </label>
+        </div>
+        <div class="col col-50">
+          <label class="item item-input item-stacked-label itemInfo">
+            <span class="input-label">Valor a pagar</span>
+            <h3 class="assertive">{{usuario.intValorAPagar | currency: $ :0}}</h3>
+          </label>
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="col col-25"></div>
+        <div class="col col-50">
+          <label class="item item-input item-stacked-label itemInfo">
+            <span class="input-label">Fecha Limite</span>
+            <h3>{{usuario.intDiaLimitePago}}</h3>
+          </label>
+        </div>
+      </div>
 
-    </ion-content>
+      <div class="row">
+        <div class="col">
+          <label class="item item-input item-stacked-label itemInfo">
+            <span class="input-label">EPS</span>
+            <h3>{{usuario.strEPS}}</h3>
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label class="item item-input item-stacked-label itemInfo">
+            <span class="input-label">ARP</span>
+            <h3>{{usuario.strARP}}</h3>
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label class="item item-input item-stacked-label itemInfo">
+            <span class="input-label">AFP</span>
+            <h3>{{usuario.strAFP}}</h3>
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-60">
+          <label class="item item-input item-stacked-label itemInfo">
+            <span class="input-label">Operador</span>
+            <h3>{{usuario.strOperador}}</h3>
+          </label>
+        </div>
+        <div class="col col-40">
+          <label class="item item-input item-stacked-label itemInfo">
+            <span class="input-label">Clave</span>
+            <h3 class="assertive" style="font-weight: 700">{{usuario.strClave}}</h3>
+          </label>
+        </div>
+      </div>
+      <a class="button button-block icon-right ion-chevron-right button-positive" href="/#/pagos/{{usuario.strIdEmpresa}}">
+        Historial de Pagos
+      </a>
+    </div>
+
   </ion-view>
 </div>
