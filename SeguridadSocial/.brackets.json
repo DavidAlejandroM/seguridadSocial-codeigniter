@@ -1,0 +1,6 @@
+{
+    "jscodehints.detectedExclusions": [
+        "D:/Documents/GitHub/seguridadSocial-codeigniter/SeguridadSocial/platforms/android/cordova/lib/android_sdk_version.js",
+        "D:/Documents/GitHub/seguridadSocial-codeigniter/SeguridadSocial/platforms/android/cordova/lib/build.js"
+    ]
+}

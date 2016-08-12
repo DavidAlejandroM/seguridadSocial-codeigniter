@@ -46,7 +46,7 @@ angular.module('starter.controllers', [])
       .success(function(result){
         $scope.pagos = result;
         pagos = $scope.pagos;
-        console.log($scope.pagos);
+        //console.log($scope.pagos);
       })
       .error(function(result){
         console.log('algo anda mal' + result);

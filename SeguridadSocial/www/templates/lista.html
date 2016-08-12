@@ -7,7 +7,7 @@
     <div ng-model="busqueda">
 
         <div class="list">
-          <a class="item item-avatar" ng-repeat="u in usuarios | filter: busqueda" ng-href="/#/info/{{u.strIdEmpresa}}">
+          <a class="item item-avatar" ng-repeat="u in usuarios | filter: busqueda" ng-href="#/info/{{u.strIdEmpresa}}">
             <img src="img/person.png">
             <h2>{{u.strNombres}} {{u.strApellido1}}</h2>
             <p>{{u.strIdEmpresa}}</p>
